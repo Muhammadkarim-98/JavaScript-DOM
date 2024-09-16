@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style></style>
+</head>
+
+<body>
+    <h2 id="title">Node.nodeClone - JS DOM</h2>
+
+    <ul id="myList">
+        <li>Apple</li>
+        <li>Melon</li>
+        <li>Banana</li>
+        <li>Pear</li>
+    </ul>
+    <script>
+        const myList = document.getElementById('myList');
+        const listChildren = myList.children;
+
+        const bananaItem = listChildren[2];
+        const BananaCopy = bananaItem.cloneNode(true); // Set the deep parameter to true if you also want to clone descendants (children).
+        myList.appendChild(BananaCopy)
+    </script>
+</body>
+
+</html>

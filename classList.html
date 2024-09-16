@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        .bold {
+            font-weight: bold;
+        }
+        
+        .green-text {
+            color: green;
+        }
+        
+        .red-bg {
+            background: red;
+        }
+        
+        .big-font {
+            font-size: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="title">Class List - UZB</h2>
+    <p id="myPara">Yeah</p>
+
+    <script>
+        const myPara = document.getElementById("myPara");
+        myPara.classList.add("bold", "big-font", "red-bg", "green-text");
+        myPara.classList.remove("red-bg");
+        myPara.classList.replace("big-font", "red-bg");
+        myPara.classList.toggle("big-font");
+        console.log(myPara.classList.contains("white-text")); // false
+
+        console.log(myPara.classList);
+    </script>
+</body>
+
+</html>

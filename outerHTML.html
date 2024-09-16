@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background: red;
+            font-size: bold;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="title">Node.outerHTML - JS DOM</h2>
+
+    <script>
+        const h2Title = document.getElementById('title');
+        h2Title.outerHTML = '<div>i\'ve changed! Node.outerHTML - JS DOM</div>'
+
+        console.log(h2Title.outerHTML);
+    </script>
+</body>
+
+</html>

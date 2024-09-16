@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="title">Element.querySelectorAll - JS DOM</h2>
+
+    <!-- PART - 1 -->
+    <!-- <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div> -->
+
+    <!-- PART - 2 -->
+    <ul id="list-1">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ul>
+    <ul id="list-2">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ul>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        // Part - 1
+        // boxes.forEach(e => e.style.color = 'red')
+
+        // Part - 2
+        const list2 = document.querySelector('#list-2');
+        const items = list2.querySelectorAll('li');
+        console.log(items);
+    </script>
+</body>
+
+</html>

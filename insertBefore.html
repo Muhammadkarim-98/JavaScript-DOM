@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="title">Node.insertBefore() - JS DOM</h2>
+    <ul id="myList">
+        <li>Apple</li>
+        <li>Mango</li>
+        <li id="orangeItem">Orange</li>
+        <li>Banana</li>
+    </ul>
+
+
+    <script>
+        const myList = document.getElementById('myList');
+        const orange = document.getElementById('orangeItem');
+
+        const melonItem = document.createElement('li');
+        melonItem.textContent = 'Melon';
+
+
+        // myList.insertBefore(melonItem, orange);
+
+
+        // OPPOSITE TO appendChild (ADDING TO BEGINNING) 👇🏼
+        function addToBeginning(parent, toInsert) {
+            const firstChild = parent.firstChild;
+            parent.insertBefore(toInsert, firstChild)
+        }
+        addToBeginning(myList, melonItem)
+    </script>
+</body>
+
+</html>
