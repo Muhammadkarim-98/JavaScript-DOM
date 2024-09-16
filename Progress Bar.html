@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .progress-bar {
+            position: relative;
+            height: 40px;
+            width: 300px;
+            border: 1px solid #000;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            /* width: 20%; */
+            background-color: green;
+            transition: width 0.5s;
+        }
+        
+        .progress-bar-value {
+            position: absolute;
+            color: rgb(79, 71, 71);
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="title"> Progress Bar - JS</h2>
+    <div class="progress-bar">
+        <div class="progress-bar-value">65%</div>
+        <div class="progress-bar-fill"></div>
+    </div>
+
+
+    <script type="text/javascript">
+        class ProgressBar {
+            constructor(element, initialEl = 0) {
+                this.valueEl = element.querySelector('.progress-bar-value');
+                this.fillEl = element.querySelector('.progress-bar-fill');
+
+                this.setValue(initialEl);
+                // console.log(this.valueEl);
+                // console.log(this.fillEl);
+            }
+            setValue(newValue) {
+                if (newValue < 0) {
+                    newValue = 0;
+                }
+                if (newValue > 100) {
+                    newValue = 0
+                }
+                this.value = newValue;
+                this.update()
+            }
+            update() {
+                const percentage = this.value + '%';
+                this.fillEl.style.width = percentage;
+                this.valueEl.textContent = percentage
+            }
+        };
+        const pb1 = new ProgressBar(document.querySelector('.progress-bar'), 70)
+    </script>
+</body>
+
+</html>
