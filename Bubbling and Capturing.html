@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #title,
+        #child {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="title">Bubbling vs Capturing in JavaScript</h2>
+    <div id="parent">
+        <p>
+            Lorem ipsum <strong id="child">dolor</strong> sit amet, consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eveniet nulla iusto dolore animi sunt nisi vel ut ullam tempore commodi, culpa repellendus expedita
+            quam rerum libero reiciendis soluta minima quos repudiandae magni eius veritatis labore rem? Dignissimos animi ipsam impedit accusamus quasi ad, distinctio dicta totam ut? Dolor, natus. elit. Unde quis laborum neque accusamus id iste beatae
+            officiis itaque optio nesciunt?
+        </p>
+    </div>
+
+    <script type="text/javascript">
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        parent.addEventListener("click", function() {
+            console.log('i am Parent');
+        });
+
+        child.addEventListener('click', function() {
+            console.log('i am Child')
+        });
+    </script>
+</body>
+
+</html>

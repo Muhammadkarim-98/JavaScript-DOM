@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Append Child - JS DOM</h1>
+    <ul id="my-list"></ul>
+
+    <script type="text/javascript">
+        function createListItem(text) {
+            var li = document.createElement("li");
+            li.textContent = text;
+            return li;
+        }
+
+        function appendChild(children, parent) {
+            children.forEach(function(child) {
+                parent.appendChild(child);
+            });
+        }
+
+        const parent = document.getElementById("my-list");
+        const items = [createListItem("Dom"), createListItem("John"), createListItem("Sam")];
+        appendChild(items, parent);
+
+        // IT IS CORRECT SOLUTION ALSO, SEE BELOW 👇🏼
+        items.forEach(function(li) {
+            parent.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

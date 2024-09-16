@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedde HTML</title>
+</head>
+
+<body>
+    <p id="para"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad error repellat inventore doloremque est deleniti eaque facilis officiis dignissimos veniam explicabo sed voluptas quod obcaecati enim asperiores, dicta minus aliquid. Quos fugit maiores
+        quisquam sed neque ex quibusdam quasi animi debitis. Consectetur commodi accusantium, labore maxime nihil voluptates eius rep ellendus.</p>
+
+    <script type="text/javascript">
+        const parentWindow = window.parent.document;
+        const parentHeading = parentWindow.getElementById('heading');
+
+        const para = document.getElementById('para');
+        para.textContent = para.textContent + ' ' + parentHeading.textContent;
+    </script>
+</body>
+
+</html>
