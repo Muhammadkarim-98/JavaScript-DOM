@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">Element.matches() - JAVASCRIPT DOM</h1>
+
+    <p id="myPara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tempore beatae quaerat et nostrum in corrupti expedita consequatur odio, similique hic, voluptates nulla, incidunt iste quas officiis reiciendis. Numquam, fugiat?
+    </p>
+
+    <script>
+        const myPara = document.getElementById("myPara");
+        const result = myPara.matches("#myPara"); // true
+        // const result = myPara.matches('.myPara'); // false
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">Element.insertAdjacent() - JAVASCRIPT DOM</h1>
+
+    <button onclick="addEl()">Add Text</button>
+    <p id="myPara">Just click to add a <em>Red Element</em></p>
+    <script>
+        function addEl() {
+            const myPara = document.getElementById("myPara");
+            const newEl = document.createElement('div');
+            newEl.textContent = 'new Red Element';
+            newEl.style.color = 'red'
+            myPara.insertAdjacentElement("afterend", newEl);
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">The isEqualNode() Method - JavaScript DOM</h1>
+
+    <!-- Tests if two nodes (elements) are equal
+    Includes child nodes in test -->
+
+    <div id="myNode" class="test"></div>
+    <div class="test" id="myNode"></div>
+
+    <script>
+        const div1 = document.querySelectorAll("div")[0];
+        const div2 = document.querySelectorAll("div")[1];
+
+        const isEqual = div1.isEqualNode(div2);
+        console.log(isEqual); // true
+    </script>
+</body>
+
+</html>

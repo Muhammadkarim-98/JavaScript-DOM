@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">Element.insertAdjacentHTML() - JAVASCRIPT DOM</h1>
+
+    <button onclick="addText()">Add Text</button>
+    <p id="myPara">Just click to add a <em>text</em></p>
+    <script>
+        function addText() {
+            const myPara = document.getElementById("myPara");
+            myPara.insertAdjacentHTML("afterend", "<p>own text</p>");
+        }
+    </script>
+</body>
+
+</html>
